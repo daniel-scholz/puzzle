@@ -1,0 +1,65 @@
+<head>
+    <meta charset="utf-8">
+    <script>
+        x = function(s){
+        return s.split("").reduce(function(a,b){
+            a=((a<<5)-a)+b.charCodeAt(0);
+            return a&a},0); 
+    } 
+    checkAnswer=function(){ 
+        let input=document.getElementById("answerInput").value;
+         if(x(input)==1860785957   ){
+            document.getElementById("answerArea").innerHTML="Richtig" ;
+        }else{
+            document.getElementById("answerArea").innerHTML="Falsch" ; 
+        }
+    }
+ </script>
+    <style>
+        #heading::after {
+            visibility: hidden;
+            content:"Use the inspector!"
+        }
+        li {
+        padding: 10px;
+        }
+        #vier::after {
+            content: "TGVlcmd1dA=="
+        }
+        .base64 {
+            display: none;
+        }
+        .monospace {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        </style>
+</head>
+
+<body>
+    <h1 id="heading">Wooo puzzleezZZZ!!!</h1>
+    <ol>
+        <li><i>I'll be back</i></li>
+        <li> 0x0793 - 0x0799 </li>
+        <li> <a id="link" target="blank">
+            </a>
+            <img src="./duck.png" width="30px">
+            <img src="./duck.png" width="30px">
+            <img src="./go.png" width="30px">:
+            the <div style=" display:inline-block; border:1px solid black;background-color:#ffff00; width:30px; height:30px;"></div>
+            stripper
+            + <i>1.</i>
+        </li>
+        <li>
+            NOT <div id="vier" class="base64">
+            </div>
+        </li>
+
+    </ol>
+    <div>
+        <div><span class="monospace">3.replace("-","")</span> 2 <span class="monospace">4.substring(0,3) 4.substring(4)</span></div>
+        <input id="answerInput" type="text">!!
+        <button type="button" id="answer" onclick="checkAnswer()">Prüfen</button>
+    </div>
+    <div id="answerArea"></div>
+
+</body>
